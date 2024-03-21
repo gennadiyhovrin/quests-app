@@ -7,7 +7,6 @@ const Map = () => (
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
     ></iframe>
-  
   </div>
 );
 

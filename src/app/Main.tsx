@@ -5,8 +5,6 @@ import CategoryMenu from "@/components/CategoryMenu";
 import { Posts } from "@/data/types";
 import { useState } from "react";
 
-
-
 export default function Home({ posts }: { posts: Posts }) {
   const [activeCategory, setActiveCategory] = useState("all");
 
@@ -22,14 +20,9 @@ export default function Home({ posts }: { posts: Posts }) {
         <CategoryMenu activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
         <div className="container py-12">
           <div className=" flex flex-wrap gap-9">
-            {
-            (activeCategory == "all" ? posts : posts.filter((post) => post.type === activeCategory))
-            .map((post) => (
-                <Card
-                  key={post.id}
-                  post={post}
-                />
-              ))}
+            {(activeCategory == "all" ? posts : posts.filter((post) => post.type === activeCategory)).map((post) => (
+              <Card key={post.id} post={post} />
+            ))}
           </div>
         </div>
       </div>

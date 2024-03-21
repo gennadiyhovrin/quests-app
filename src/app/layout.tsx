@@ -4,6 +4,7 @@ import "./globals.css";
 import SectionContainer from "@/components/SectionContainer";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body id="app" className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white min-h-screen bg-cover bg-no-repeat bg-center">
+      <body
+        id="app"
+        className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white min-h-screen bg-cover bg-no-repeat bg-center"
+      >
         <SectionContainer>
           <div className="flex h-screen flex-col justify-between font-sans">
             <Header />
@@ -27,6 +31,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </SectionContainer>
+        <Toaster />
       </body>
     </html>
   );

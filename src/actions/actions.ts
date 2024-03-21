@@ -1,5 +1,7 @@
+import URL from "@/data/urls"
+
 export async function getPosts() {
-    const res = await fetch('http://localhost:3001/quests')
+    const res = await fetch(URL.API+'/quests')
   
    
     if (!res.ok) {
@@ -10,7 +12,7 @@ export async function getPosts() {
   }
    
   export async function getPost(id:number) {
-    const res = await fetch('http://localhost:3001/quests/' + id)
+    const res = await fetch(URL.API+'/quests/' + id)
   
    
     if (!res.ok) {

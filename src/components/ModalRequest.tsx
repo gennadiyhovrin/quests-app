@@ -4,12 +4,13 @@ import Form from "./Form";
 const ModalRequest = () => {
   const [isOpen, setIsOpen] = useState(false as boolean);
 
-  const toggleModal = () => setIsOpen(!isOpen);
+  const toggleModal: () => void = () => setIsOpen(!isOpen);
 
   return (
     <div className="relative">
       <button onClick={toggleModal} className="bg-orange-500 text-white font-bold py-2 px-8 rounded-3xl uppercase modal-open">
-      Make a reservation      </button>
+        Make a reservation{" "}
+      </button>
 
       {isOpen && (
         <div className="modal fixed w-full h-full top-0 left-0 flex items-center justify-center z-50">
@@ -46,8 +47,7 @@ const ModalRequest = () => {
                   </svg>
                 </div>
               </div>
-            <Form/>
-             
+              <Form toggleModal={toggleModal} />
             </div>
           </div>
         </div>

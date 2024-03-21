@@ -1,15 +1,12 @@
 import questCategories from "@/data/questsCategories";
 import CategoryItem from "./CategoryItem";
 
-
 type Props = {
-    activeCategory: string
-    setActiveCategory: (category: string) => void
-}
+  activeCategory: string;
+  setActiveCategory: (category: string) => void;
+};
 
-
-
-const CategoryMenu = ({  activeCategory, setActiveCategory } : Props) => {
+const CategoryMenu = ({ activeCategory, setActiveCategory }: Props) => {
   return (
     <nav className=" p-4">
       <ul className="flex space-x-12">
@@ -22,6 +19,5 @@ const CategoryMenu = ({  activeCategory, setActiveCategory } : Props) => {
     </nav>
   );
 };
-
 
 export default CategoryMenu;
